@@ -1,0 +1,44 @@
+*****
+
+All files created by me (Matthew Walsh) with the exception of:
+	1. LoadTrainingSetNoMeanStage1.c
+	2. VQ_Stage1WithNoMeanCBSize16.c
+	3. LBG_GenerateCodebookForStageOneSize16.c
+	4. MSE_mono.c
+
+The above files were created by my supervisor (Liam Dowling) and I modified them (some extensively) to fit the aims of the project. 
+
+*****
+
+
+These files are the code used to implement the watermarking scheme described in Chapter 3 of the report.
+
+The file "Code Flowcharts" should give instructions as to the order each file is supposed to be run 
+but just in case it doesn't work, there's a linear step-by-step provided below.
+
+Step-by-Step Implementation of Watermarking Schemes:
+
+TS NO MEAN STAGE 1
+LBG CB 16
+VQ STAGE 1
+CALC MEAN
+CALC VARIANCES
+CALC Polarities
+GENERATE KEYS.m
+Generate Error Images
+
+TS NO MEAN STAGE 2
+LBG CB STAGE 2 CB 256
+Generate Fragile.m
+
+Choice:
+Embedding? 
+	VQ Stage 2 With Embedding & Index Constrained
+Extracting? 
+	VQ Stage 2 Without Embedding & Reg. VQ & Read out Indices
+	Extract SF Watermark
+
+
+Adding Quantised Images back together
+Calculate NC value
+MSE Mono
